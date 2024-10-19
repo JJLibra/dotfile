@@ -14,6 +14,9 @@ apt install -y net-tools curl wget
 echo "Installing build-essential..."
 apt install -y build-essential
 
+echo "Installing vim..."
+apt install -y vim
+
 echo "Configuring Git..."
 git config --global user.name "jj_li_ubuntu"
 git config --global user.email "2565474095@qq.com"
