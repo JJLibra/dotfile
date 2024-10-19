@@ -1,9 +1,11 @@
 #!/bin/zsh
 
-if [ "$EUID" -ne 0 ]; then
-  echo "Please run this script as root or with sudo."
-  exit 1
-fi
+echo "Installing zsh..."
+apt install -y zsh
+chsh -s $(which zsh) $(whoami)
+
+echo "Installing oh-my-zsh..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Installing Powerlevel10k theme..."
 ZSH_CUSTOM=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}
