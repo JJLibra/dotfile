@@ -23,10 +23,3 @@ git config --global user.email "2565474095@qq.com"
 
 echo "Cleaning up unused packages..."
 apt autoremove -y && apt clean
-
-echo "Installing zsh..."
-apt install -y zsh
-chsh -s $(which zsh) $(whoami)
-
-echo "Installing oh-my-zsh..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
