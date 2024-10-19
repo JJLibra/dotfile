@@ -50,26 +50,4 @@ else
   echo 'plugins=(git z copypath copyfile copybuffer sudo zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search you-should-use)' >> "$HOME/.zshrc"
 fi
 
-echo "Adding additional plugin configuration to .zshrc..."
-
-cat << 'EOF' >> "$HOME/.zshrc"
-
-# >>> plugins configuration >>>
-# zsh-history-substring-search
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
-bindkey '^p' history-substring-search-up
-bindkey '^n' history-substring-search-down
-export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=(bg=none,fg=magenta,bold)
-
-# you-should-use
-export YSU_MESSAGE_POSITION="after"
-# <<< plugins configuration <<<
-EOF
-
-echo "Reloading Zsh configuration..."
-source $HOME/.zshrc
-
 echo "All plugins installed and configured! Please restart your terminal or log out and back in to apply changes."

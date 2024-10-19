@@ -15,17 +15,4 @@ fi
 echo "Installing zoxide..."
 apt install -y zoxide fzf
 
-
-echo "Adding additional plugin configuration to .zshrc..."
-cat << 'EOF' >> "$HOME/.zshrc"
-
-# Alias for cd replacement: zoxide
-eval "$(zoxide init --cmd cd zsh)"
-alias cd=z
-EOF
-
-# Reload Zsh configuration
-echo "Reloading Zsh configuration..."
-source $HOME/.zshrc
-
 echo "Installation complete! Please restart your terminal or log out and back in to apply the changes."
