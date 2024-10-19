@@ -24,21 +24,4 @@ else
   echo "eza already installed, skipping..."
 fi
 
-echo "Adding additional plugin configuration to .zshrc..."
-cat << 'EOF' >> "$HOME/.zshrc"
-
-alias c="clear"
-
-# Alias for ls replacement: eza
-alias ls="eza --icons"
-alias ll="eza --icons --long --header"
-alias la="eza --icons --long --header --all"
-alias lg="eza --icons --long --header --all --git"
-alias tree="eza --icons --tree"
-EOF
-
-# Reload Zsh configuration
-echo "Reloading Zsh configuration..."
-source $HOME/.zshrc
-
 echo "Installation complete! Please restart your terminal or log out and back in to apply the changes."
